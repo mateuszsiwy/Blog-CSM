@@ -4,7 +4,6 @@ import Specializations from "./components/Specializations";
 import Blog from "./components/Blog";
 import Presentations from "./components/Presentations";
 import Contact from "./components/Contact";
-// import Footer from "./components/Footer.jsx";
 
 const Home = () => {
   return (
@@ -15,7 +14,6 @@ const Home = () => {
       <Blog />
       <Presentations />
       <Contact />
-      {/* <Footer /> */}
     </div>
   );
 };
