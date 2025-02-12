@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 const Home = () => {
   return (
-    <div>
+    <div className="font-montserrat">
       {/* <Navbar /> */}
       <Content />
       <Hero />
