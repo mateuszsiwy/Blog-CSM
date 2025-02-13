@@ -29,3 +29,6 @@ dist-ssr
 # Tailwind CSS
 tailwind.config.js
 postcss.config.js
+/BlogAPI/.vs/BlogAPI
+/BlogAPI/bin/Debug/net8.0
+/BlogAPI/obj
