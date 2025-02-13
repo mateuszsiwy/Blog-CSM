@@ -4,7 +4,7 @@ const Blog = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.example.com/blog") // Tu podłączysz CMS
+    fetch("https://localhost:7027/api/posts") // Tu podłączysz CMS
       .then((res) => res.json())
       .then((data) => setArticles(data));
   }, []);
@@ -17,7 +17,7 @@ const Blog = () => {
           {articles.map((article) => (
             <div key={article.id} className="p-6 bg-white rounded-lg shadow-md">
               <h3 className="text-xl font-bold">{article.title}</h3>
-              <p className="mt-2 text-gray-600">{article.summary}</p>
+              <p className="mt-2 text-gray-600">{article.content}</p>
             </div>
           ))}
         </div>

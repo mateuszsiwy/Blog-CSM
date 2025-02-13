@@ -78,6 +78,7 @@ namespace BlogAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Post>> PostPost(Post post)
         {
+            post.CreatedDate = DateTime.Now.Date;
             _context.Post.Add(post);
             await _context.SaveChangesAsync();
 
