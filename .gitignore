@@ -32,3 +32,4 @@ postcss.config.js
 /BlogAPI/.vs/BlogAPI
 /BlogAPI/bin/Debug/net8.0
 /BlogAPI/obj
+/BlogAPI/appsettings.json
