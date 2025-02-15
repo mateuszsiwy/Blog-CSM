@@ -6,6 +6,7 @@
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
     using System.Text;
+    using System.Text.Json;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -28,7 +29,9 @@
             }
 
             string token = CreateToken();
-            return Ok(token);
+            var tokenObject = new { token = token };
+            var tokenJson = JsonSerializer.Serialize(tokenObject);
+            return Ok(tokenJson);
         }
 
         private string CreateToken()

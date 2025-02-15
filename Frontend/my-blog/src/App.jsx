@@ -1,14 +1,29 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Login from './components/admin/Login';
+import Dashboard from './components/admin/Dashboard';
+import PrivateRoute from './components/admin/PrivateRoute';
 
-import Home from './Home'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-        <Home />
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Publiczne ścieżki */}
+        <Route path="/" element={<Home />} />
+        <Route path="/admin/login" element={<Login />} />
+        
+        {/* Chronione ścieżki administracyjne */}
+        <Route
+          path="/admin/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
